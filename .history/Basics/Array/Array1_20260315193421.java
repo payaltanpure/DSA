@@ -1,4 +1,4 @@
-class Array1 {
+class LargestElementArray {
 
     public static void main(String[] args) {
 
