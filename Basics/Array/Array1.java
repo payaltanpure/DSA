@@ -2,7 +2,7 @@ class Array1 {
 
     public static void main(String[] args) {
 
-        int[] arr = {10, 45, 23, 67, 12, 89, 34};
+        int arr[] = {10, 45, 23, 67, 12, 89, 34};
 
         int largest = arr[0];   // assume first element is largest
 
