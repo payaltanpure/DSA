@@ -31,17 +31,32 @@ class LinkedList7 {
         temp.next = newNode;
     }
 
-    int countNodes() {
+    // Delete node by value
+    void deleteByValue(int value) {
+
+        // empty list
+        if (head.data == value) {
+            System.out.println("Element is found");
+            return;
+        }
+
+        if (head.data == value) {
+            head = head.next;
+            return;
+        }
 
         Node temp = head;
-        int count = 0;
 
-        while (temp != null) {
-            count++;
+        // traversed till the node which is previous to the node to delete
+        while (temp.next != null && temp.next.data != value) {
             temp = temp.next;
         }
 
-        return count;
+        if (temp.next != null) {
+            temp.next = temp.next.next;
+        } else {
+            System.out.println("Value not found in list");
+        }
     }
 
     void display() {
@@ -52,7 +67,6 @@ class LinkedList7 {
             temp = temp.next;
         }
 
-        System.out.println("NULL");
     }
 
     public static void main(String[] args) {
@@ -64,9 +78,12 @@ class LinkedList7 {
         list.insertAtEnd(30);
         list.insertAtEnd(40);
 
-        System.out.println("Linked List:");
+        System.out.println("Original List:");
         list.display();
 
-        System.out.println("Total number of nodes: " + list.countNodes());
+        list.deleteByValue(20);
+
+        System.out.println("After deleting 20:");
+        list.display();
     }
 }
