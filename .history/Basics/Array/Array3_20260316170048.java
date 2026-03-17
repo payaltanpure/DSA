@@ -9,7 +9,7 @@ class Array3 {
         System.out.print("Enter number of elements: ");
         int n = sc.nextInt();
 
-        int arr[] = new int[n];
+        int arr[n] = new int[n];
 
         System.out.println("Enter array elements:");
 
