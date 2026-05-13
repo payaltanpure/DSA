@@ -11,6 +11,11 @@ class Node {
 public class LinkedList3 {
 
     Node head; // Nodes object newnode
+    // In Java, when you declare an instance variable like:
+    // Node head;
+    // 👉 Java automatically initializes it to null (default value for object references).
+    // So internally, it behaves like:
+    // Node head = null;
 
     void insertatbeg(int data) {
         Node newnode = new Node(data); // node class object
