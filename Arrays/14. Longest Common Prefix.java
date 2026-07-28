@@ -88,3 +88,89 @@ class Solution {
         return prefix;
     }
 }
+
+// Visual Summary
+// Initial prefix
+
+// flower│▼
+
+// flow startsWith(flower)? ❌
+
+// flower
+// flowe
+// flow ✅
+
+// Current prefix = flow
+
+// Then
+
+// flight startsWith(flow)? ❌
+
+// flow
+// flo
+// fl ✅
+
+// Current prefix = fl
+
+// Return
+
+// fl
+
+// How startsWith() Works
+
+// Suppose
+
+// String s = "flower";
+// Expression Result
+// s.startsWith("f") true
+// s.startsWith("fl") true
+// s.startsWith("flo") true
+// s.startsWith("flower") true
+// s.startsWith("flowe") true
+// s.startsWith("flowering") false
+// s.startsWith("low") false
+// s.startsWith("ower") false
+
+// Internally, startsWith() compares the prefix characters one by one from the
+// beginning of the string.
+
+// For example:
+
+// "flight".startsWith("fl")
+
+// Comparison:
+
+// flight
+// ||
+// fl
+// f == f ✅
+// l == l ✅
+
+// All characters in "fl" matched the start of "flight", so it returns true.
+
+// Another example:
+
+// "flight".startsWith("flo")
+
+// Comparison:
+
+// flight
+// flo
+// f == f ✅
+// l == l ✅
+// i != o ❌
+
+// A mismatch occurs, so it returns false.
+
+// Time Complexity
+// In the worst case, the prefix may be shortened character by character.
+// Overall time complexity
+
+// is O(N × M), where:
+// N = number of strings
+// M = length of the longest
+
+// string (or initial prefix)
+
+// This solution is efficient and is the standard approach used for this
+// problem.

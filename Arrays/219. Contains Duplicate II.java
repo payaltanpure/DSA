@@ -35,24 +35,6 @@
 //     }
 // }
 
-class Solution {
-    public boolean containsNearbyDuplicate(int[] nums, int k) {
-        HashMap<Integer, Integer> map = new HashMap<>();
-
-        for (int i = 0; i < nums.length; i++) {
-            if (map.containsKey(nums[i])) {
-                int previndex = map.get(nums[i]);
-
-                if (i - previndex <= k) {
-                    return true;
-                }
-            }
-            map.put(nums[i], i); // put nums value as key in map and index as value in hashmap
-        }
-        return false;
-    }
-}
-
 import java.util.HashMap;
 
 class Solution {
